@@ -13,13 +13,16 @@
         android:theme="@style/Theme.Prestapoints"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Prestapoints">
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.Prestapoints"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
