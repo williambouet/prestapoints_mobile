@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/nav_header.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@color/blue_dark"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
+
+    <ImageView
+        android:id="@+id/yourImageViewId"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/image" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User1"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user1@test.com"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>
