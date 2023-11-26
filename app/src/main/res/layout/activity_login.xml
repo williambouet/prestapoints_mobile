@@ -48,11 +48,11 @@
         android:id="@+id/buttonLogin"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Se connecter"
-        android:background="@drawable/btn_connexion"
-        android:textColor="#fff"
-        android:textSize="20dp"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
-
+        android:layout_marginTop="16dp"
+        android:theme="@style/Theme.Btn"
+        android:background="@drawable/btn_connexion"
+        android:text="Se connecter"
+        android:textColor="#FFFCFC"
+        android:textSize="20dp" />
 </LinearLayout>
