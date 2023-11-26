@@ -18,6 +18,11 @@
             android:theme="@style/Theme.Prestapoints">
         </activity>
         <activity
+            android:name=".activities.SignInActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Prestapoints">
+        </activity>
+        <activity
             android:name=".activities.MainActivity"
             android:theme="@style/Theme.Prestapoints"
             android:exported="true">
@@ -27,5 +32,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

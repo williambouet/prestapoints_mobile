@@ -11,7 +11,7 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Déjà Inscrit ?"
+        android:text="Connexion"
         android:textColor="#fff"
         android:textSize="30sp"
         android:layout_marginTop="40dp"
@@ -55,4 +55,18 @@
         android:text="Se connecter"
         android:textColor="#FFFCFC"
         android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/signInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pas encore inscrit ?"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:onClick="onSignIn"
+        android:textStyle="bold"
+        />
 </LinearLayout>

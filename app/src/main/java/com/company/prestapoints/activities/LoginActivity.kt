@@ -4,6 +4,7 @@ import AuthenticationService
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -56,6 +57,10 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    fun onSignIn(view: View) {
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
+    }
 
     private fun showFailureDialog() {
         AlertDialog.Builder(this)
