@@ -1,17 +1,21 @@
 package com.company.prestapoints.activities
 
 import AuthenticationService
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.company.prestapoints.R
+import com.company.prestapoints.R.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,19 +26,15 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(layout.activity_login)
 
         // Initialiser l'instance de AuthenticationService
         authService = AuthenticationService(this)
 
         // Récupérer les références des éléments du formulaire depuis le layout
-        usernameEditText = findViewById(R.id.editTextUsername)
-        passwordEditText = findViewById(R.id.editTextPassword)
-        loginButton = findViewById(R.id.buttonLogin)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Retour"
-        supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.color.blue_dark))
+        usernameEditText = findViewById(id.editTextUsername)
+        passwordEditText = findViewById(id.editTextPassword)
+        loginButton = findViewById(id.buttonLogin)
 
         // Définir le gestionnaire de clic pour le bouton de connexion
         loginButton.setOnClickListener {
