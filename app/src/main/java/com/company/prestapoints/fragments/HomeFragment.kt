@@ -1,5 +1,6 @@
 package com.company.prestapoints.fragments
 
+import CategoryCardFragment
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,8 +14,14 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
+        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
+        // Ajouter dynamiquement le fragment card
+        val cardFragment = CategoryCardFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, cardFragment)
+            .commit()
+
+        return rootView
+    }
 }

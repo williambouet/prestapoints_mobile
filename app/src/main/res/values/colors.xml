@@ -12,6 +12,8 @@
     <color name="myColorPrimary">#FF4081</color>
     <color name="myColorPrimaryVariant">#D81B60</color>
     <color name="myStatusBarColor">#C2185B</color>
+    <color name="searchBar">#38A3A5</color>
+
 
 
 </resources>

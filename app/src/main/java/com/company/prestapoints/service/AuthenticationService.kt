@@ -53,7 +53,6 @@ class AuthenticationService(private val context: Context) {
             }
 
             override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
-                Log.e("AuthenticationService", "onFailure called >>>>>>>>> ", t)
                 callback(false)
             }
         })
