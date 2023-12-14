@@ -1,5 +1,6 @@
 package com.company.prestapoints.fragments
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,13 @@ class PrestationAdapter(private var prestations: List<Prestation>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val prestation = prestations[position]
-        holder.titleTextView?.text = prestation.title
+        val prestationTitleLength: Int = prestation.title.length
+        if(prestationTitleLength > 20){
+            holder.titleTextView?.text = prestation.title.substring(0, 20)+ " ..."
+        }else{
+            holder.titleTextView?.text = prestation.title
+        }
+
     }
 
     override fun getItemCount(): Int {

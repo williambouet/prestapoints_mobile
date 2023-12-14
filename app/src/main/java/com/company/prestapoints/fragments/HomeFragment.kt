@@ -29,6 +29,11 @@ class HomeFragment : Fragment() {
             .replace(R.id.fragmentContainerCategory, cardFragment)
             .commit()
 
+        val footer = FooterFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerFooter, footer)
+            .commit()
+
         return rootView
     }
 }

@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,79 +7,96 @@
     android:background="#FAF6F0"
     tools:context=".fragments.HomeFragment">
 
-    <!-- Ajoutez le SearchView à votre mise en page -->
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
-        style="@style/SearchViewStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="20dp"
-        app:iconifiedByDefault="false"
-        app:queryHint="Rechercher par mot clé" />
-
-    <!-- Trait en haut -->
-    <View
-        android:id="@+id/dividerTop"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/searchView"
-        android:layout_marginTop="20dp"
-        android:background="#B7B7B8"
-        />
-
-    <!-- Titre pour la première section -->
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dividerTop"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:text="Découvrez les ateliers près de chez vous ->"
-        android:textSize="15sp"
-        />
-
-    <!-- FrameLayout pour la première section -->
-    <FrameLayout
-        android:id="@+id/fragmentContainerPrestation"
+    <!-- Utilisez LinearLayout comme enfant direct de ScrollView -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewTitle"
-        />
+        android:orientation="vertical">
 
-    <!-- Trait entre les deux sections -->
-    <View
-        android:id="@+id/dividerBetweenContainers"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_below="@id/fragmentContainerPrestation"
-        android:layout_marginTop="10dp"
-        android:background="#B7B7B8"
-        />
+        <!-- Ajoutez le SearchView à votre mise en page -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            style="@style/SearchViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="20dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Rechercher par mot clé" />
 
-    <!-- Titre pour la deuxième section -->
-    <TextView
-        android:id="@+id/textViewCategoriesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dividerBetweenContainers"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:text="Découvrez les catégories ->"
-        android:textSize="15sp"
-        />
+        <!-- Trait en haut -->
+        <View
+            android:id="@+id/dividerTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/searchView"
+            android:layout_marginTop="20dp"
+            android:background="#E3E3E4"
+            />
 
-    <!-- FrameLayout pour la deuxième section -->
-    <FrameLayout
-        android:id="@+id/fragmentContainerCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewCategoriesTitle"
-        android:layout_alignParentBottom="true"
-        />
+        <!-- Titre pour la première section -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerTop"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Découvrez les ateliers près de chez vous ->"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_dark"
+            />
 
-</RelativeLayout>
+        <!-- FrameLayout pour la première section -->
+        <FrameLayout
+            android:id="@+id/fragmentContainerPrestation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            />
+
+        <!-- Trait entre les deux sections -->
+        <View
+            android:id="@+id/dividerBetweenContainers"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/fragmentContainerPrestation"
+            android:layout_marginTop="10dp"
+            android:background="#E3E3E4"
+            />
+
+        <!-- Titre pour la deuxième section -->
+        <TextView
+            android:id="@+id/textViewCategoriesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerBetweenContainers"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Découvrez les catégories ->"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_dark"
+            />
+
+        <!-- FrameLayout pour la deuxième section -->
+        <FrameLayout
+            android:id="@+id/fragmentContainerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewCategoriesTitle"
+            android:layout_alignParentBottom="true"
+            />
+
+        <FrameLayout
+            android:id="@+id/fragmentContainerFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragmentContainerCategory"
+            android:layout_alignParentBottom="true" />
+    </LinearLayout>
+</ScrollView>

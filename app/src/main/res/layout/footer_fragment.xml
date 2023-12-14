@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FAF6F0">
+
+    <!-- Début du pied de page -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#4682B4">
+
+        <!-- Titre "prestapoint" -->
+        <TextView
+            android:id="@+id/footerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="prestapoint"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <!-- Texte descriptif -->
+        <TextView
+            android:id="@+id/footerDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PrestaPoints permet à des passionnés de partager leur savoir-faire avec des novices à travers des ateliers et d'obtenir des réductions dans des grandes enseignes"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_below="@id/footerTitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+    <!-- Fin du pied de page -->
+
+</RelativeLayout>

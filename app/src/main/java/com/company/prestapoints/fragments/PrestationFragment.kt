@@ -52,12 +52,6 @@ class PrestationFragment : Fragment() {
                 val prestations = withContext(Dispatchers.IO) {
                     apiService.getPrestations().toList()
                 }
-
-                // Log des prestations
-                for (prestation in prestations) {
-                    Log.d("Prestation", "ID: ${prestation.id}, Title: ${prestation.title}")
-                }
-
                 // Mettez à jour l'adaptateur avec les nouvelles données
                 adapter.updateData(prestations)
 
