@@ -26,15 +26,25 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_login)
+        setContentView(R.layout.activity_login)
 
         // Initialiser l'instance de AuthenticationService
         authService = AuthenticationService(this)
 
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Personnaliser l'icône de la flèche de retour
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_arrow_back_24)
+
         // Récupérer les références des éléments du formulaire depuis le layout
-        usernameEditText = findViewById(id.editTextUsername)
-        passwordEditText = findViewById(id.editTextPassword)
-        loginButton = findViewById(id.buttonLogin)
+        usernameEditText = findViewById(R.id.editTextUsername)
+        passwordEditText = findViewById(R.id.editTextPassword)
+        loginButton = findViewById(R.id.buttonLogin)
 
         // Définir le gestionnaire de clic pour le bouton de connexion
         loginButton.setOnClickListener {
@@ -55,7 +65,11 @@ class LoginActivity : AppCompatActivity() {
                 showFillFieldsDialog()
             }
         }
+
+        // Activer la flèche de retour dans la barre d'action
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
 
     fun onSignIn(view: View) {
         val intent = Intent(this, SignInActivity::class.java)

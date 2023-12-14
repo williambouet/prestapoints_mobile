@@ -3,24 +3,24 @@
     android:layout_height="wrap_content"
     android:background="#FAF6F0">
 
-    <!-- Début du pied de page -->
+    <!-- Rectangle bleu -->
     <RelativeLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#4682B4">
+        android:background="@color/blue_dark">
 
         <!-- Titre "prestapoint" -->
         <TextView
             android:id="@+id/footerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="prestapoint"
+            android:text="Prestapoint"
+            android:layout_marginStart="10dp"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
 
         <!-- Texte descriptif -->
@@ -28,15 +28,20 @@
             android:id="@+id/footerDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PrestaPoints permet à des passionnés de partager leur savoir-faire avec des novices à travers des ateliers et d'obtenir des réductions dans des grandes enseignes"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
             android:layout_below="@id/footerTitle"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" />
-
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="\@2023 PrestaPoints. Tous droits réservés."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
     </RelativeLayout>
-    <!-- Fin du pied de page -->
 
+    <!-- Trait rouge -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#FF0000"
+        android:layout_alignTop="@id/footer" />
 </RelativeLayout>

@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.company.prestapoints.R
 import com.company.prestapoints.model.Prestation
-import com.bumptech.glide.Glide
 import com.company.prestapoints.config.RetrofitConfig
 import com.company.prestapoints.service.ApiService
 import kotlinx.coroutines.Dispatchers
@@ -27,6 +26,7 @@ class PrestationAdapter(private var prestations: List<Prestation>) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView? = itemView.findViewById(R.id.titlePrestation)
         val imageView: ImageView? = itemView.findViewById(R.id.imageViewPrestation)
+        val textPrix: TextView? = itemView.findViewById(R.id.textPrix)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -43,6 +43,9 @@ class PrestationAdapter(private var prestations: List<Prestation>) :
         } else {
             holder.titleTextView?.text = prestation.title
         }
+
+        val prixText = prestation.addPoint.toString() + " pts"; // Assurez-vous que la classe Prestation a un champ "prix"
+        holder.textPrix?.text = prixText
 
         // Chargez l'image uniquement si la liste d'images n'est pas vide
         if (prestation.images.isNotEmpty()) {

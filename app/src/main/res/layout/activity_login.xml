@@ -6,6 +6,12 @@
     android:padding="16dp"
     android:background="#22577a">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+         />
+
     <!-- Titre "Déjà Inscrit ?" -->
     <TextView
         android:id="@+id/textViewTitle"
