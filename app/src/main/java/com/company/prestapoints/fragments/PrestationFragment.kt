@@ -32,10 +32,12 @@ class PrestationFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_prestation_card, container, false)
 
-        // Initialisez la RecyclerView
         recyclerView = view.findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        adapter = PrestationAdapter(emptyList()) // Adapter initialisé avec une liste vide
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+
+        // Adapter initialisé avec une liste vide
+        adapter = PrestationAdapter(emptyList())
         recyclerView.adapter = adapter
 
         // Appeler la fonction pour obtenir les prestations
@@ -51,9 +53,13 @@ class PrestationFragment : Fragment() {
                     apiService.getPrestations().toList()
                 }
 
+                // Log des prestations
+                for (prestation in prestations) {
+                    Log.d("Prestation", "ID: ${prestation.id}, Title: ${prestation.title}")
+                }
+
                 // Mettez à jour l'adaptateur avec les nouvelles données
-                adapter = PrestationAdapter(prestations)
-                recyclerView.adapter = adapter
+                adapter.updateData(prestations)
 
             } catch (e: HttpException) {
                 Log.e("Prestation", "HTTP Error: ${e.code()}")

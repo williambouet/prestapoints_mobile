@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,25 +20,65 @@
         app:iconifiedByDefault="false"
         app:queryHint="Rechercher par mot clé" />
 
+    <!-- Trait en haut -->
     <View
-        android:id="@+id/divider"
+        android:id="@+id/dividerTop"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@id/searchView"
         android:layout_marginTop="20dp"
         android:background="#B7B7B8"
-    />
+        />
+
+    <!-- Titre pour la première section -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerTop"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Découvrez les ateliers près de chez vous ->"
+        android:textSize="15sp"
+        />
+
+    <!-- FrameLayout pour la première section -->
     <FrameLayout
         android:id="@+id/fragmentContainerPrestation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/fragmentContainerCategory" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        />
 
+    <!-- Trait entre les deux sections -->
+    <View
+        android:id="@+id/dividerBetweenContainers"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/fragmentContainerPrestation"
+        android:layout_marginTop="10dp"
+        android:background="#B7B7B8"
+        />
+
+    <!-- Titre pour la deuxième section -->
+    <TextView
+        android:id="@+id/textViewCategoriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerBetweenContainers"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Découvrez les catégories ->"
+        android:textSize="15sp"
+        />
+
+    <!-- FrameLayout pour la deuxième section -->
     <FrameLayout
         android:id="@+id/fragmentContainerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
-
+        android:layout_below="@id/textViewCategoriesTitle"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>
