@@ -29,22 +29,27 @@ class AuthenticationService(private val context: Context) {
         // Convertir les informations d'identification en Base64
         val credentials = "$username:$password"
         val base64Credentials = Base64.encodeToString(credentials.toByteArray(), Base64.NO_WRAP)
-
         // Effectuer la demande d'authentification avec Retrofit
         val call = authService.authenticate(username, password, "Basic $base64Credentials")
         call.enqueue(object : Callback<TokenResponse> {
             override fun onResponse(call: Call<TokenResponse>, response: Response<TokenResponse>) {
-                if (response.isSuccessful) {
-                    val token = response.body()?.token
-                    saveToken(token)
-                    Log.d("AuthenticationService", "Token: $token")
-                    callback(true)
-                } else {
-                    Log.d("AuthenticationService", "Response Code: ${response.code()}")
-                    Log.d("AuthenticationService", "Response Message: ${response.message()}")
-                    Log.d("AuthenticationService",">>>>>>>>>>>>>>>>>>>>>> echec !!")
+                try {
+                    if (response.isSuccessful) {
+                        val token = response.body()?.token
+                        saveToken(token)
+                        Log.d("AuthenticationService", "Token: $token")
+                        callback(true)
+                    } else {
+                        Log.d("AuthenticationService", "Response Code: ${response.code()}")
+                        Log.d("AuthenticationService", "Response Message: ${response.message()}")
+                        Log.d("AuthenticationService",">>>>>>>>>>>>>>>>>>>>>> echec !!")
+                        callback(false)
+                    }
+                }catch (e: Exception) {
+                    Log.e("AuthenticationService", "Message >>>>>>>>>>>>> ", e)
                     callback(false)
                 }
+
             }
 
             override fun onFailure(call: Call<TokenResponse>, t: Throwable) {

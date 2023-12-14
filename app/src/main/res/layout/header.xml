@@ -3,9 +3,10 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="160dp"
     android:orientation="vertical"
     android:background="@color/blue_dark"
+
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
@@ -14,6 +15,7 @@
         android:id="@+id/yourImageViewId"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/image" />
 
 

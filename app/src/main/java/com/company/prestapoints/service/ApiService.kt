@@ -1,10 +1,16 @@
 package com.company.prestapoints.service
 
+import android.database.Observable
+import com.company.prestapoints.model.ApiResponse
 import com.company.prestapoints.model.Categories
 import com.company.prestapoints.model.Category
+import com.company.prestapoints.model.Prestation
+import com.company.prestapoints.model.UserSignIn
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
+import retrofit2.http.POST
 
 interface ApiService {
     @GET("endpoint")
@@ -15,4 +21,10 @@ interface ApiService {
 
     @GET("categories")
     fun getCategories(): Call<List<Category>>
+
+    @POST("public/sign-in")
+    fun signUp(@Body request: UserSignIn): Call<ApiResponse>
+
+    @GET("accueil")
+    suspend fun getPrestations(): List<Prestation>
 }
