@@ -1,6 +1,5 @@
 package com.company.prestapoints.model
 
-import android.media.Image
 
 data class Prestation(
     val id: Int? = null,
@@ -12,7 +11,7 @@ data class Prestation(
     val state: String? = null,
     val description: String? = null,
     val maxUser: Int? = null,
-    // val images: List<Image> = emptyList(),
+    val images: List<Image> = emptyList(),
     // val type: Type? = null,
     val category: Category? = null,
     // val location: Location? = null,

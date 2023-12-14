@@ -52,7 +52,7 @@ class PrestationFragment : Fragment() {
                 val prestations = withContext(Dispatchers.IO) {
                     apiService.getPrestations().toList()
                 }
-                // Mettez à jour l'adaptateur avec les nouvelles données
+
                 adapter.updateData(prestations)
 
             } catch (e: HttpException) {
