@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FAF6F0">
+
+    <!-- Rectangle bleu -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_dark">
+
+        <!-- Titre "prestapoint" -->
+        <TextView
+            android:id="@+id/footerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prestapoint"
+            android:layout_marginStart="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <!-- Texte descriptif -->
+        <TextView
+            android:id="@+id/footerDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/footerTitle"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="\@2023 PrestaPoints. Tous droits réservés."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- Trait rouge -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#FF0000"
+        android:layout_alignTop="@id/footer" />
+</RelativeLayout>

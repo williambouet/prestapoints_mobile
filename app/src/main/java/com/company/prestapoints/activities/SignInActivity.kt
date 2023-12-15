@@ -1,11 +1,14 @@
 package com.company.prestapoints.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.company.prestapoints.R
 import com.company.prestapoints.config.RetrofitConfig
 import com.company.prestapoints.model.UserSignIn
@@ -28,6 +31,22 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
+
+        // Récupérer la Toolbar depuis le layout
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+
+        // Configurer la Toolbar comme la barre d'action
+        setSupportActionBar(toolbar)
+
+        // Désactiver l'affichage du titre de l'application
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // Activer la flèche de retour dans la barre d'action
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Personnaliser l'icône de la flèche de retour (flèche blanche)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_arrow_back_24)
+
 
         // Initialise les éléments de l'interface utilisateur en utilisant findViewById
         editFirstName = findViewById(R.id.editFirstName)
@@ -71,4 +90,15 @@ class SignInActivity : AppCompatActivity() {
             }
         }
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                // Lorsque le bouton de retour est cliqué, revenez à MainActivity
+                startActivity(Intent(this, MainActivity::class.java))
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
 }

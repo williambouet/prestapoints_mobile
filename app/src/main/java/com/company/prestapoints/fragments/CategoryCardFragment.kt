@@ -22,8 +22,6 @@ class CategoryCardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
-
-        // Utiliser LinearLayoutManager avec orientation horizontale
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         val categoryList = getCategoryList()

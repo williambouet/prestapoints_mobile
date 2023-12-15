@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.company.prestapoints.R
+import com.company.prestapoints.ui.PrestationFragment
 
 class HomeFragment : Fragment() {
 
@@ -16,10 +17,21 @@ class HomeFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Ajouter dynamiquement le fragment card
+        // Afficher le fragment de prestation
+        val cardPrestation = PrestationFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerPrestation, cardPrestation)
+            .commit()
+
+        // Afficher le fragment de catégorie
         val cardFragment = CategoryCardFragment()
         childFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, cardFragment)
+            .replace(R.id.fragmentContainerCategory, cardFragment)
+            .commit()
+
+        val footer = FooterFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerFooter, footer)
             .commit()
 
         return rootView
