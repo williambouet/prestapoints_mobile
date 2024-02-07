@@ -13,17 +13,17 @@
         android:theme="@style/Theme.Prestapoints"
         tools:targetApi="31">
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".ui.activities.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Prestapoints">
         </activity>
         <activity
-            android:name=".activities.SignInActivity"
+            android:name=".ui.activities.SignInActivity"
             android:exported="true"
             android:theme="@style/Theme.Prestapoints">
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:theme="@style/Theme.Prestapoints"
             android:exported="true">
             <intent-filter>

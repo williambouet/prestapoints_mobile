@@ -1,4 +1,4 @@
-package com.company.prestapoints.ui
+package com.company.prestapoints.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -9,10 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.company.prestapoints.R
-import com.company.prestapoints.config.RetrofitConfig
-import com.company.prestapoints.fragments.PrestationAdapter
-import com.company.prestapoints.model.Prestation
-import com.company.prestapoints.service.ApiService
+import com.company.prestapoints.util.RetrofitConfig
+import com.company.prestapoints.ui.adapters.PrestationAdapter
+import com.company.prestapoints.network.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

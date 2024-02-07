@@ -1,13 +1,11 @@
-package com.company.prestapoints.fragments
+package com.company.prestapoints.ui.fragments
 
-import CategoryCardFragment
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.company.prestapoints.R
-import com.company.prestapoints.ui.PrestationFragment
 
 class HomeFragment : Fragment() {
 

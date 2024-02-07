@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAF6F0"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".ui.fragments.HomeFragment">
 
     <!-- Utilisez LinearLayout comme enfant direct de ScrollView -->
     <LinearLayout

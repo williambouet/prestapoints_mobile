@@ -1,4 +1,4 @@
-package com.company.prestapoints.service
+package com.company.prestapoints.network
 
 import android.database.Observable
 import com.company.prestapoints.model.ApiResponse

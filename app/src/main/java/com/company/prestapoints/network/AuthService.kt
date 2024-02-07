@@ -1,3 +1,6 @@
+package com.company.prestapoints.network
+
+import TokenResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

@@ -4,7 +4,7 @@ package com.company.prestapoints.model
 data class Prestation(
     val id: Int? = null,
     val title: String = "",
-    val duration: Int? = null,
+    val duration: Long? = null,
     val addPoint: Int? = null,
     val dateStart: String? = null,
     val dateEnd: String? = null,

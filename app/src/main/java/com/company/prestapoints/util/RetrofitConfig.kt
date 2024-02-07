@@ -1,7 +1,7 @@
-package com.company.prestapoints.config
+package com.company.prestapoints.util
 // Fichier: ApiConfig.kt
 
-import com.company.prestapoints.service.ApiService
+import com.company.prestapoints.network.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

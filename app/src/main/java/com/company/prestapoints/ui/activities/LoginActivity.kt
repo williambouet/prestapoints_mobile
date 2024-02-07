@@ -1,21 +1,16 @@
-package com.company.prestapoints.activities
+package com.company.prestapoints.ui.activities
 
-import AuthenticationService
-import android.annotation.SuppressLint
+import com.company.prestapoints.network.AuthenticationService
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat
 import com.company.prestapoints.R
-import com.company.prestapoints.R.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -28,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Initialiser l'instance de AuthenticationService
+        // Initialiser l'instance de com.company.prestapoints.network.AuthenticationService
         authService = AuthenticationService(this)
 
 
@@ -38,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // Personnaliser l'icône de la flèche de retour
         supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_arrow_back_24)
 
         // Récupérer les références des éléments du formulaire depuis le layout
@@ -53,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
 
             // Vérifier si les champs ne sont pas vides
             if (username.isNotEmpty() && password.isNotEmpty()) {
-                // Appeler la fonction de connexion de AuthenticationService
+                // Appeler la fonction de connexion de com.company.prestapoints.network.AuthenticationService
                 authService.login(username, password) { isLoggedIn ->
                     if (isLoggedIn) {
                         startActivity(Intent(this, MainActivity::class.java))
