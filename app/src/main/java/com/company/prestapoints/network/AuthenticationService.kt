@@ -1,3 +1,6 @@
+package com.company.prestapoints.network
+
+import TokenResponse
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Base64
@@ -37,16 +40,16 @@ class AuthenticationService(private val context: Context) {
                     if (response.isSuccessful) {
                         val token = response.body()?.token
                         saveToken(token)
-                        Log.d("AuthenticationService", "Token: $token")
+                        Log.d("com.company.prestapoints.network.AuthenticationService", "Token: $token")
                         callback(true)
                     } else {
-                        Log.d("AuthenticationService", "Response Code: ${response.code()}")
-                        Log.d("AuthenticationService", "Response Message: ${response.message()}")
-                        Log.d("AuthenticationService",">>>>>>>>>>>>>>>>>>>>>> echec !!")
+                        Log.d("com.company.prestapoints.network.AuthenticationService", "Response Code: ${response.code()}")
+                        Log.d("com.company.prestapoints.network.AuthenticationService", "Response Message: ${response.message()}")
+                        Log.d("com.company.prestapoints.network.AuthenticationService",">>>>>>>>>>>>>>>>>>>>>> echec !!")
                         callback(false)
                     }
                 }catch (e: Exception) {
-                    Log.e("AuthenticationService", "Message >>>>>>>>>>>>> ", e)
+                    Log.e("com.company.prestapoints.network.AuthenticationService", "Message >>>>>>>>>>>>> ", e)
                     callback(false)
                 }
 

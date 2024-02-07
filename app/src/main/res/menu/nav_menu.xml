@@ -11,12 +11,26 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/baseline_home_24"
             android:title="Accueil" />
-
+        <item
+            android:id="@+id/partenaire"
+            android:icon="@drawable/baseline_add_shopping_cart_24"
+            android:title="Nos partenaires" />
+        <item
+            android:id="@+id/points"
+            android:icon="@drawable/baseline_control_point_24"
+            android:title="Convertir mes points" />
+        <item
+            android:id="@+id/nav_atelier"
+            android:icon="@drawable/baseline_note_add_24"
+            android:title="Proposer un atelier" />
+        <item
+            android:id="@+id/nav_mesAtelier"
+            android:icon="@drawable/baseline_list_24"
+            android:title="Mes ateliers" />
         <item
             android:id="@+id/nav_login"
             android:icon="@drawable/baseline_login_24"
             android:title="Connexion" />
-
         <item
             android:id="@+id/nav_sign_in"
             android:icon="@drawable/baseline_account_circle_24"

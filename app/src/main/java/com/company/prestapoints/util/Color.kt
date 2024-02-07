@@ -1,4 +1,4 @@
-package com.company.prestapoints.ui.theme
+package com.company.prestapoints.util
 
 import androidx.compose.ui.graphics.Color
 

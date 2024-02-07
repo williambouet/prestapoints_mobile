@@ -1,4 +1,4 @@
-package com.company.prestapoints.ui.theme
+package com.company.prestapoints.util
 
 import android.app.Activity
 import android.os.Build

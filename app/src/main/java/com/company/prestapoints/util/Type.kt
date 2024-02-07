@@ -1,4 +1,4 @@
-package com.company.prestapoints.ui.theme
+package com.company.prestapoints.util
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

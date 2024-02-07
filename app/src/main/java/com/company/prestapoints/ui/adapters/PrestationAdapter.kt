@@ -1,6 +1,5 @@
-package com.company.prestapoints.fragments
+package com.company.prestapoints.ui.adapters
 
-import android.annotation.SuppressLint
 import android.graphics.BitmapFactory
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,8 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.company.prestapoints.R
 import com.company.prestapoints.model.Prestation
-import com.company.prestapoints.config.RetrofitConfig
-import com.company.prestapoints.service.ApiService
+import com.company.prestapoints.util.RetrofitConfig
+import com.company.prestapoints.network.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.company.prestapoints.activities
+package com.company.prestapoints.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.company.prestapoints.R
-import com.company.prestapoints.fragments.HomeFragment
+import com.company.prestapoints.ui.fragments.HomeFragment
 import com.google.android.material.navigation.NavigationView
 
 

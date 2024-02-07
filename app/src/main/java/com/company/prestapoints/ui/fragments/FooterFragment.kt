@@ -1,4 +1,4 @@
-package com.company.prestapoints.fragments
+package com.company.prestapoints.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

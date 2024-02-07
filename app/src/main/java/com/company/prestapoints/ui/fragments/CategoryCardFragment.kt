@@ -1,3 +1,5 @@
+package com.company.prestapoints.ui.fragments
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.company.prestapoints.R
-import com.company.prestapoints.fragments.CategoryAdapter
+import com.company.prestapoints.ui.adapters.CategoryAdapter
 import com.company.prestapoints.model.Category
 
 class CategoryCardFragment : Fragment() {

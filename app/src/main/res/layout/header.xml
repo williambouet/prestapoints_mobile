@@ -3,7 +3,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="175dp"
     android:orientation="vertical"
     android:background="@color/blue_dark"
 
@@ -15,7 +15,7 @@
         android:id="@+id/yourImageViewId"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/image" />
 
 
@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="User1"
+        android:layout_marginTop="5dp"
         android:textColor="@color/white"
         android:textStyle="bold"/>
     <TextView
